@@ -1,0 +1,33 @@
+{
+    "validLoginTest": {
+        "name": "Luis Guerra",
+        "email": "luis.guerra@multivision.pt",
+        "password": "8367b427a9334943"
+    },
+    "invalidLoginUser": {
+        "email": "invalid.guerra@multivision.pt",
+        "password": "123456"
+    },
+    "invalidLoginNull": {
+        "email": "",
+        "password": ""
+    },
+    "endpoints": {
+        "baseUrl": "https://unitel-dev.metric.pt",
+        "hall": "/hall",
+        "tasks": "/tasks",
+        "manager": "/manager",
+        "map": "/map",
+        "tabular": "/tabular",
+        "repots": "/reports",
+        "tour": "/tour",
+        "features": "/featuresDisplay",
+        "news": "/news"
+    },
+    "legendDivClass" : "kpi-legend div",
+    "legendTitle": {
+        "crossSectors": "BEST",
+        "RSRP": "RSRP",
+        "PATH": "PATH"
+    }
+}

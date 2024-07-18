@@ -1,14 +1,36 @@
 {
-  "name": "playwright-practice",
+  "name": "metric-automated-tests-playwright",
   "version": "1.0.0",
-  "description": "playwright-automation-web&amp;api",
+  "description": "Hi 👋🏽!",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:e2e": "npx playwright test tests/",
+    "test:e2e:all": "npx playwright test tests --project=all-browsers-and-tests",
+    "test:e2e:ci": "CI=1 npx playwright test --project=ci --shard=$CI_NODE_INDEX/$CI_NODE_TOTAL",
+    "test:e2e:dev": "npx playwright test tests-examples/ --project=chromium --headed --retries=0 --reporter=line",
+    "test:e2e:smoke": "npx playwright test tests-examples/ --grep @smoke --project=chromium",
+    "test:e2e:non-smoke": "npx playwright test tests-examples/ --grep-invert @smoke --project=firefox",
+    "test:visual:acme": "npx playwright test example-applitools.spec.ts --project=chromium",
+    "test:visual:playwright": "npx playwright test example3.spec.ts --project=all-browsers-and-tests",
+    "test": "playwright test",
+    "test:debug": "playwright test --debug",
+    "test-and-email": "node runEmailAll.mjs",
+    "test-subset-and-email": "node runEmail.mjs"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.44.1",
-    "@types/node": "^20.14.2"
+    "@applitools/eyes-playwright": "^1.17.0",
+    "@playwright/test": "^1.45.1",
+    "@types/node": "^20.14.10",
+    "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14",
+    "which": "^4.0.0"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
