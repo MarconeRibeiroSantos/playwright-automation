@@ -62,7 +62,7 @@ export default defineConfig({
     // viewport: { width: 1280, height: 720 },
     // video: 'on-first-retry',
   },
-    timeout: 80000,
+    timeout: 60000,
     // expect: {
       /**
        * Maximum time expect() should wait for the condition to be met.
